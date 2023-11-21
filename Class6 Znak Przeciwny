@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+class Znak
+{
+private:
+    float liczba;
+public:
+    Znak(float p_liczba): liczba(p_liczba) {}
+    void operator * ()
+    {
+        cout<< "Licbza przeciwna "<<liczba<<" to " << liczba *(-1)<<endl;
+    }
+};
+
+int main()
+{
+    Znak t1(8), t2(-4);
+    t1.operator*();
+    t2.operator*();
+
+
+    return 0;
+}
