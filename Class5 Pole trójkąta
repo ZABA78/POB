@@ -1,0 +1,25 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+class Triangle
+{
+private:
+    float basis, height;
+public:
+    Triangle(float p_basis, float p_height): basis(p_basis), height(p_height) {}
+    void operator * ()
+    {
+
+        cout<< "Pole trojkata wynosi: "<< fixed << setprecision(2)<<basis*height/2<<endl;
+    }
+};
+
+int main()
+{
+    Triangle t1(7.5,4.5);
+    t1.operator*();
+
+    return 0;
+}
