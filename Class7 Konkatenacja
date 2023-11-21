@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+class Concatenation
+{
+private:
+    string word_1, word_2;
+public:
+    Concatenation(string p_word_1, string p_word_2): word_1(p_word_1), word_2(p_word_2) {}
+
+    void operator+()
+    {
+        cout<< word_1 + " " + word_2<<endl;
+    }
+};
+
+int main()
+{
+    Concatenation c1("Programowanie", "obiektowe");
+    c1.operator+();
+
+
+    return 0;
+}
