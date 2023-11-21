@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+
+class Sum
+{
+private:
+    int number_1;
+public:
+    Sum(int p_number_1): number_1(p_number_1)
+    {
+
+    }
+    void operator - (int number_2)
+    {
+     cout<<number_1<<" - "<<number_2<<" = "<<number_1- number_2<<endl;
+    }
+    void operator / (int number_2)
+    {
+     cout<<number_1<<" / "<<number_2<<" = "<<number_1/ number_2<<endl;
+    }
+};
+
+int main()
+{
+    Sum s1(10);
+    s1.operator-(2);
+    s1.operator/(2);
+    return 0;
+}
