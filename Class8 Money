@@ -1,0 +1,38 @@
+#include <iostream>
+
+using namespace std;
+
+class Money
+{
+private:
+    int cash;
+public:
+    Money(int p_cash): cash(p_cash){}
+    
+    void operator-(int p_remove)
+    {
+        cash-=p_remove;
+    }
+
+    void displayCash()
+    {
+        cout<<"Ilosc gotowki: "<<cash<<endl;
+    }
+
+
+};
+
+int main()
+{
+    Money m1(1500);
+    m1.displayCash();
+
+    m1.operator-(400);
+    m1.displayCash();
+
+    m1.operator-(700);
+    m1.displayCash();
+
+
+    return 0;
+}
