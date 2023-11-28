@@ -1,0 +1,31 @@
+
+#include <iostream>
+using namespace std;
+
+class A
+{
+    public:
+    int number = 7;
+};
+
+class B: public A
+{
+public:
+    B()
+    {
+
+        number = 10;
+    }
+    void displayNumber()
+    {
+        cout<< "Liczba: " << number<< endl;
+    }
+};
+int main()
+{
+    B b1;
+    b1.displayNumber();
+
+    return 0;
+}
+
