@@ -34,7 +34,7 @@ int main() {
     ryba->jedz();
     ryba->plyn();
 
-    delete ryba;
+
 
     return 0;
 }
