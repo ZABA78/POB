@@ -1,0 +1,47 @@
+
+#include <iostream>
+using namespace std;
+
+class Point
+{
+public:
+    int x;
+    int y;
+
+    Point(int x = 0, int y = 0) : x{x}, y{y} {}
+};
+
+class Shape
+{
+private:
+    Point coord_;
+
+public:
+    Shape(int x = 0, int y = 0) : coord_{x, y} {}
+
+    Shape(Point coord) : coord_{coord} {}
+};
+
+class Line : public Shape
+{
+private:
+    Point end_;
+
+public:
+    Line(const Point& start, const Point& end) : Shape{start}, end_{end}
+    {
+    }
+};
+
+int main()
+{
+    Point startPoint(1, 2);
+    Point endPoint(3, 4);
+
+    Line myLine(startPoint, endPoint);
+
+    cout << "Start Point: (" << startPoint.x << ", " << startPoint.y << ")\n";
+    cout << "End Point: (" << endPoint.x << ", " << endPoint.y << ")\n";
+
+    return 0;
+}
