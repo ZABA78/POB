@@ -1,0 +1,40 @@
+//zbuduj program zawierający klase Zwiwerze ptak i ryba. klasy ptak i Ryba dziedziczą po klasie zwierze. Przypisz atrybuty w klasie ptak i ryba stosując wskaźniki
+
+#include <iostream>
+
+using namespace std;
+
+class Zwierze {
+public:
+    void jedz() {
+        cout << "Zwierze je." << endl;
+    }
+};
+
+class Ptak : public Zwierze {
+public:
+    void lec() {
+        cout << "Ptak leci." << endl;
+    }
+};
+
+class Ryba : public Zwierze {
+public:
+    void plyn() {
+        cout << "Ryba płynie." << endl;
+    }
+};
+
+int main() {
+    Ptak ptak;
+    ptak.jedz();
+    ptak.lec();
+
+    Ryba *ryba = new Ryba();
+    ryba->jedz();
+    ryba->plyn();
+
+    delete ryba;
+
+    return 0;
+}
