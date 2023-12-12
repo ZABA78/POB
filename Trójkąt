@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+
+class Triangle{
+private:
+    float triangle_basis;
+    float  traingle_height;
+public:
+    void setBasisHeight(float p_traingle_basis,float p_traingle_height){
+    triangle_basis = p_traingle_basis;
+    traingle_height = p_traingle_height;
+    }
+    void displayTriangleArea(){
+    cout<<"pole trojkata: "<<(triangle_basis*traingle_height)/2<<endl;
+    }
+};
+class Square{
+private:
+     float square_basis;
+public:
+    void setBasis(float p_square_basis){
+    square_basis = p_square_basis;
+    }
+};
+int main()
+{
+     Triangle t1;
+     Square s1;
+     t1.setBasisHeight(4,8);
+     t1.displayTriangleArea();
+     t1.setBasisHeight(3,6);
+     t1.displayTriangleArea();
+    return 0;
+}
