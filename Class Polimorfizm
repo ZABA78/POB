@@ -1,0 +1,33 @@
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+class Print
+{
+public:
+    virtual void print()
+    {
+        cout<< "klasa bazowa" <<endl;
+    }
+
+};
+
+class DervedPrint: public Print
+{
+public:
+    virtual void print()
+    {
+        cout<<"Klasa pochodna"<<endl;
+    }
+};
+
+int main()
+{
+    Print *p = new Print();
+    Print *dp = new DervedPrint();
+
+    p->print();
+    p->print();
+    return 0;
+}
