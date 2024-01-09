@@ -1,0 +1,39 @@
+#include <iostream>
+
+using namespace std;
+
+class Figura {
+public:
+    virtual void display() {
+        cout << "Wyswietl Figure" << endl;
+    }
+};
+
+class Kolo : public Figura {
+public:
+    void display() override {
+        cout << "Wyswietl kolo" <<endl;
+    }
+};
+
+class Kwadrat : public Figura {
+public:
+    void display() override {
+       cout << "wyswietl kwadrat " << endl;
+    }
+};
+
+int main() {
+    Figura s;
+    Figura* c = new Kolo();
+    Figura* sq = new Kwadrat();
+
+    s.display();
+    c->display();
+    sq->display();
+
+    delete c;
+    delete sq;
+
+    return 0;
+}
