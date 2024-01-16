@@ -1,0 +1,64 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+class Ksztalt
+{
+    float x;
+
+public:
+    virtual void oblicz_pole() = 0;
+};
+
+class Kolo : public Ksztalt
+{
+    float r;
+
+public:
+    Kolo(float x = 3)
+    {
+        r = x;
+    }
+    virtual void oblicz_pole()
+    {
+        cout << "Pole kola wynosi = " << M_PI * r * r << endl;
+    }
+};
+
+class Kwadrat : public Ksztalt
+{
+    float a;
+
+public:
+    virtual void oblicz_pole()
+    {
+        cout << "Pole Kwadratu = " << a * a << endl;
+    }
+    Kwadrat(float x = 4)
+    {
+        a = x;
+    }
+
+};
+
+void obliczenia(Ksztalt *x)
+{
+x->oblicz_pole();
+}
+int main()
+{
+    Kolo k(1);
+    Kwadrat kw;
+
+    Ksztalt *wsk;
+
+    wsk = &k;
+    wsk -> oblicz_pole();
+
+    wsk = &kw;
+    wsk -> oblicz_pole();
+
+
+    return 0;
+}
