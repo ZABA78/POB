@@ -1,0 +1,27 @@
+#include <iostream>
+#include "sam.hpp"
+
+using namespace std;
+
+void Samochod::wczytaj()
+{
+    cout<<"podaj dane samochodu: " <<endl;
+    cout << "Podaj marke samochodu";
+    cin >> marka;
+    cout<<"Podaj model: ";
+    cin>> model;
+    cout<< "Podaj rocznik samochodu: ";
+    cin >> rocznik;
+    cout<<"Podaj przebieg samochodu: ";
+    cin>> przebieg;
+
+}
+
+void Samochod::wyswietl()
+{
+    cout<< "\n\nDane Samochodu: " <<endl;
+    cout<<"Marka = " << marka <<endl;
+    cout<<"Model = " << model <<endl;
+    cout<<"Rocznik = " << rocznik <<endl;
+    cout<<"Przebieg = " << przebieg <<endl;
+}

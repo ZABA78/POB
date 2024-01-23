@@ -1,0 +1,15 @@
+#include <iostream>
+#include <conio.h>
+#include "sam.hpp"
+
+using namespace std;
+
+int main()
+{
+    Samochod s1;
+
+    s1.wczytaj();
+    system("cls");
+    s1.wyswietl();
+    return 0;
+}
