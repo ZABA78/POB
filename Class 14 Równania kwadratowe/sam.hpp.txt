@@ -1,37 +1,21 @@
 #include <iostream>
-#include "sam.hpp"
-#include <cmath>
+
 using namespace std;
 
-void Rowanie::wczytaj()
+class Rowanie
 {
-    cout<<"podaj dane do rowania kwadratowego " <<endl;
-    cout << "Podaj a: ";
-    cin >> a;
-    cout<<"Podaj b: ";
-    cin>> b;
-    cout<< "Podaj c: ";
-    cin >> c;
+public:
+    float a;
+    float b;
+    float c;
+    float x;
+    float x1;
+    float x2;
+    float delta;
 
 
-}
+    void wczytaj();
+    void wyswietl();
+};
 
-void Rowanie::wyswietl()
-{
-    delta = pow(b, 2) - 4 * a *c;
-    if(delta > 0)
-       {
-        x1 = (-b - sqrt(delta))/(2*a);
-        x2 = (-b + sqrt(delta))/(2*a);
-        cout<< " x1 wynosi " << x1<<endl;
-        cout<< " x2 wynosi " << x2<<endl;
-        }else if(delta == 0){
-        x = -b/2*a;
-        cout<< " x wynosi " << x <<endl;
-        }else{
-        cout << "To rownanie kwadratowe nie ma rozwiazan" <<endl;
-        }
-
-
-}
 
