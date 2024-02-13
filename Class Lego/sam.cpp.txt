@@ -1,0 +1,22 @@
+#include <iostream>
+#include "sam.hpp"
+
+using namespace std;
+
+void Klocki::wczytaj()
+{
+    cout<<"Podaj ilosc stosow klocow " <<endl;
+    cin>>klocki;
+
+}
+
+void Klocki::wyswietl()
+{
+
+    for(int i = 0; i <= klocki; i++)
+    {
+        suma += i;
+    }
+    cout<<"Klocki = " <<suma<<endl;
+
+}

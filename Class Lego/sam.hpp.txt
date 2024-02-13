@@ -1,0 +1,15 @@
+#include <iostream>
+
+using namespace std;
+
+class Klocki
+{
+public:
+    float klocki;
+    int suma;
+
+
+    void wczytaj();
+    void wyswietl();
+};
+
