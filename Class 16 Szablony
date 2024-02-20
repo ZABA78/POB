@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+template <class typ>
+class MyPair
+{
+public:
+    typ get_max(typ a, typ b)
+    {
+        return (a>b?a:b);
+    }
+};
+
+
+int main()
+{
+    MyPair<char> my;
+    cout<<my.get_max('s', 'v');
+
+    return 0;
+}
