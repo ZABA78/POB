@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+template <class T, typename R, class S, typename W>
+T sum (T a, R b, S c, W k)
+{
+    return a+b-c*k;
+}
+
+
+
+int main()
+{
+    cout << sum<float,int,char,float>  (10.6f, 20, 'hjga', 32.3f) << endl;
+
+    return 0;
+}
